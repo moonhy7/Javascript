@@ -8,8 +8,13 @@
 </head>
 <body>
     <script>
-        var walkAmount = prompt("당신의 하루 걷는 양은 몇 보인가요?", "0");
+        // true, false 연습 예제
+        var num = 3; // 0이면 false, 0이 아닌 다른 숫자면 true
+        if(num) {
+            document.write(num, "<br>");
+        }
 
+        var walkAmount = prompt("당신의 하루 걷는 양은 몇 보인가요?", "0");
         // 조건문에 포함할 수 있는 형식은 논리식, 변수 값(0, "", null, undefined ==> false)
         // if(0) { -> 항상 false가 동작함
         if(walkAmount >= 10000) {
