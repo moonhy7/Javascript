@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weight</title>
+</head>
+<body>
+    <script>
+        // prompt의 ,뒤 값은 초기 표출되는 값
+        var username = prompt("이름은?", "");
+        var userHeight = prompt("신장은?", "0");
+        var userWeight = prompt("몸무게는?", "0");
+
+        var normal_w = (userHeight - 100) * 0.9;
+        //정상체중에서 오차범위인 -5, +5 사이 일때 true 리턴
+        var result = userWeight >= normal_w - 5 && userWeight <= normal_w + 5;
+        // result 값이 true 면 "적정 체중입니다." 아니면 "적정 체중이 아닙니다." 리턴
+        // javascript는 변수형을 지정하지 않아서 boolean값을 담았다가 다시 string값을 담을 수 있다.
+        result = result ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+        document.write(username + "님은 " + result, "<br>");
+        // 알림창으로 팝업 띄우기
+        alert("111");
+    </script>
+</body>
+</html>

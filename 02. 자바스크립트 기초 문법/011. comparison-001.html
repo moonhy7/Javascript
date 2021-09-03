@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comparison</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 10;
+        var d = "10";
+        var e = 10;
+        var f = "20"; 
+        var result;
+
+        result = a > b; //false
+        document.write(result + "<br>");
+        
+        result = a < b; //true
+        document.write(result + "<br>");
+        
+        result = a <= b; //true
+        document.write(result + "<br>");
+
+        result = b <= d; //false 문자형과 숫자형 비교
+        document.write(result + "<br>");
+        
+        result = b <= f; //true 문자형과 숫자형 비교
+        document.write(result + "<br>");
+
+        result = b == f; //true 문자형과 숫자형 비교
+        document.write(result + "<br>");
+
+        result = a != b; //true
+        document.write(result + "<br>");
+
+        result = b === f; //false 변수형까지 동일해야 true
+        document.write(result + "<br>");
+
+        result = c != d; //false 값만 같아도 false
+        document.write(result + "<br>");
+
+        result = c !== d; //true 변수형까지 동일해야 false
+        document.write(result + "<br>");
+
+        result = c !== e; //false 변수형이 달라야 true
+        document.write(result + "<br>");
+    </script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator prior</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var b = 20; 
+        var m = 30;
+        var n = 40;
+        var result;
+
+        result = a > b || b >= m || m > n; // false
+        // 하나만 true여도 true리턴 false || false || false
+        document.write(result, "<br>");
+
+        result = a > b || b >= m || m <= n; // true
+        // 하나만 true여도 true리턴 false || false || true
+        document.write(result, "<br>");
+
+        result = a<= b && b >= m && m <= n; // false 
+        // 모두 true여야 true리턴 true && false && true
+        document.write(result, "<br>");
+
+        result = a<= b && b < m && m <= n; // true 
+        // 모두 true여야 true리턴 true && false && true
+        document.write(result, "<br>");
+
+        result = !(a > b); 
+        // true면 false, false면 true리턴 !(false)
+        document.write(result, "<br>"); // true
+    </script>
+</body>
+</html>
