@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    <script>
+        // 문자열 줄 바꿔서 이어 붙일 때 역슬래시(\) 사용
+        var site = prompt("네이버, 다음, 네이트, 구글 중 \
+즐겨 사용하는 포털 검색 사이트는?", "");
+        var url;
+
+        switch(site) {
+            case "구글" : 
+                url = "www.google.com";
+                break;
+            case "다음" :
+                url = "www.daum.net";
+                break;
+            case "네이버" :
+                url = "www.naver.com";
+                break;
+            case "네이트" :
+                url = "www.nate.com";
+                break;
+            default :
+                alert("보기 중에는 없는 사이트입니다.");
+                location.reload();
+            }
+        // location.href : 현재 창 주소이동 메소드
+        if(url) {
+            location.href = "http://" + url;
+        }
+    </script>
+</body>
+</html>

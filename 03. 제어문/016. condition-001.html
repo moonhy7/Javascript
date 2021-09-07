@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+</head>
+<body>
+    <script>
+        var walkAmount = prompt("당신의 하루 걷는 양은 몇 보인가요?", "0");
+
+        // 조건문에 포함할 수 있는 형식은 논리식, 변수 값(0, "", null, undefined ==> false)
+        // if(0) { -> 항상 false가 동작함
+        if(walkAmount >= 10000) {
+            document.write("매우 좋은 습관을 지니고 계시는군요!!", "<br>");
+        } 
+        document.write("================= The End ================", "<br>");
+    </script>
+</body>
+</html>

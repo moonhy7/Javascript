@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i = 10;
+        var j = 1;
+        do {
+            document.write("hello", "<br>");
+        } while(i <3) // 조건문이 맞지 않으므로 한번만 실행된 것
+
+        //do 안의 스크립트가 먼저 실행이 되고 while문에 조건식을 검사
+        //조건식이 true면 do안의 스크립트 반복 실행
+        do {
+            document.write("javascript" +j, "<br>");
+            j++
+        } while(j<=10);
+    </script>
+</body>
+</html>
