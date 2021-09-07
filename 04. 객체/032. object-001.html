@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        //ES6 객체 생성 방식
+        // class tv2 {
+        //     constructor(color, price) {
+        //         this.color = color;
+        //         this.price = price;
+        //     }
+        //     info() {
+        //         document.write("tv2 색상 : " + this.color, "<br>");
+        //         document.write("tv2 가격 : " + this.price, "<br>");
+        //     }
+        // }
+        // var tv2 = new tv2("red", 500000);
+
+        //사용자 정의 객체 생성
+        //ES5까지는 아래 두 가지 방식으로 객체 선언 및 생성
+        //ES6부터는 자바와 동일하게 class로 객체 선언하고 호출 따로 가능    
+        var tv = new Object();
+
+        // 객체 속성 정의 및 값 할당
+        tv.color = "white";
+        tv.price = 300000;
+
+        //객체 메서드 정의
+        tv.info = function() {
+            //this 객체 : 현재 선택된 객체
+            document.write("tv 색상 : " + this.color, "<br>");
+            document.write("tv 가격 : " + this.price, "<br>");
+        }
+
+        //사용자 정의 객체 생성 (구조체 형식)
+        var car = {
+            // 객체 속성 정의 및 값 할당
+            color: "black",
+            price: 5000000,
+            //객체 메서드 정의
+            info: function() {
+                document.write("car 색상 : " + this.color, "<br>");
+                document.write("car 가격 : " + this.price, "<br>");
+            }
+        }
+        document.write("<h1>tv 객체 메서드 호출</h1>");
+        tv.info();
+        document.write("<h1>car 객체 메서드 호출</h1>");
+        car.info();
+        // document.write("<h1>car2 객체 메서드 호출</h1>");
+        // car2.info();
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        img {
+            display: block;
+            position: absolute;
+        }
+        button {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn" class="btn">이미지 이동</button>
+    <img src="images/3.png" id="img" class="img">
+    <script>
+        // id 선택자
+        var img = document.getElementById("img");
+        //tag 선택자
+        // var img = document.getElementsByTagName("img");
+        //class 선택자
+        // var img = document.getElementsByClassName("img");
+
+        var btn = document.getElementById("btn");
+        // var img = document.getElementsByTagName("button");
+        // var img = document.getElementsByClassName("btn");
+
+        //button 클릭 이벤트 등록
+        btn.addEventListener('click', function() {
+            //버튼 클릭 시 img 태그의 left, top 속성을 변경
+            img.style.left = '500px';
+            img.style.top = '500px';
+            img.style.background = 'pink';
+            img.style.border = '5px solid red';
+        });
+    </script>
+</body>
+</html>
