@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체</title>
+</head>
+<body>
+    <script>
+        var greenArr = ["교대", "방배", "강남"];
+        var yellowArr = ["미금", "정자", "수서"];
+
+        //index 2부터 데이터 1개 삭제
+        //삭제된 구간에 서초, 역삼 삽입
+        greenArr.splice(2, 1, "서초", "역삼");
+        console.log("====== splice =======");
+        console.log(greenArr);
+
+        //배열의 마지막 인덱스의 데이터 꺼내고 삭제
+        console.log("yellowArr.length=======" + yellowArr.length);
+        var data1 = yellowArr.pop();
+        yellowArr.pop();
+        console.log("====== pop =======");
+        console.log(data1);
+        console.log("yellowArr.length=======" + yellowArr.length);
+        console.log(yellowArr);
+
+        //배열의 첫번째 인덱스의 데이터 꺼내고 삭제
+        console.log("yellowArr.length=======" + yellowArr.length);
+        var data2 = yellowArr.shift();
+        yellowArr.shift();
+        console.log("====== shift =======");
+        console.log(data2);
+        console.log("yellowArr.length=======" + yellowArr.length);
+
+        //마지막 인덱스에 데이터 밀어넣기
+        yellowArr.push(data2);
+        console.log("====== push =======");
+        console.log(yellowArr);
+        console.log(data2);
+
+        //첫번째 인덱스에 데이터 밀어넣기
+        yellowArr.unshift(data1);
+        console.log("====== unshift =======");
+        console.log(yellowArr);
+        console.log(data1);
+
+    </script>
+</body>
+</html>
