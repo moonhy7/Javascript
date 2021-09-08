@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체</title>
+</head>
+<body>
+    <script>
+        var arr_1 = ["사당", "교대", "방배", "강남"];
+        var arr_2 = ["신사", "압구정", "옥수"];
+        var arr_3 = [
+            "0",
+            ["1", "2"],
+            ["3", "4"]
+        ];
+        var result1;
+
+        //배열 값 사이사이에 - 를 넣어 하나의 문자형 변수로 반환
+        var result = arr_1.join("-");
+        console.log("========== join ===========");
+        console.log(result);
+        
+        //2개의 배열을 합쳐서 하나의 배열로 반환
+        result = arr_1.concat(arr_2);
+        result1 = arr_1.concat(arr_3);
+        console.log("========== concat ===========");
+        console.log(result);
+        console.log(result1);
+
+        //배열 값 오름차순 정렬
+        arr_1.sort();
+        console.log("========== sort ===========");
+        console.log(arr_1);
+
+        //배열 잘라서 배열 만들기(lastindex - 1)
+        console.log("========== slice ===========");
+        console.log(arr_1.slice(0, 1));
+        console.log(arr_1.slice(0, 2));
+
+        // 
+    </script>
+</body>
+</html>
