@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    <script>
+        var addNum = 0;
+        //1초 후에 한 번만 실행되고 멈춤
+        var auto = setTimeout(function() {
+            addNum++;
+            console.log(addNum);
+        }, 1000);
+
+        var auto2;
+        var addNum2 = 0;
+        //재귀함수를 이용해 setInterval과 같이 사용 가능
+        function autoFnc() {
+            if(auto2 != null && auto2 != '') {
+                //auto2에 setTime이 담겨있으면 초기화
+                clearTimeout(auto2);
+            }
+            addNum2++;
+            console.log(addNum2);
+            auto2 = setTimeout(function() {
+                autoFnc();
+            }, 1000);
+        }
+        autoFnc();
+    </script>
+</body>
+</html>
