@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 변경하기</title>
+</head>
+<body>
+    <div id="galleryZone">
+        <p><img src="images/pic_1.jpg" id="photo"></p>
+        <p>
+            <button onclick="gallery(0);">이전</button>
+            <button onclick="gallery(1);">다음</button>
+        </p>
+    </div>
+    <script>
+        var num = 1;
+        function gallery(direct) {
+            if(direct) {
+                //num이 8일때 num증가 못하도록 메소드 종료
+                if(num == 8) return;
+                num++;
+            } else {
+                //num이 1일때 num감소 못하도록 메소드 종료
+                if(num == 1) return;
+                num--;
+            }
+
+            var imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src", "images/pic_" + num + ".jpg");
+        }
+    </script>
+</body>
+</html>

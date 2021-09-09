@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 함수</title>
+</head>
+<body>
+    <script>
+        function checkWeight(name, weight, height) {
+            //this는 checkWeight라는 객체를 가르킴.
+            this.userName = name;
+            this.userWeight = weight;
+            this.userHeight = height;
+            this.minWeight;
+            this.maxWeight;
+
+            this.getInfo = function() {
+                var str = "";
+                str += "이름 : " + this.userName + ", "; 
+                str += "몸무게 : " + this.userWeight + ", ";
+                str += "신장 : " + this.userHeight;
+                return str;
+            } 
+            this.getResult = function() {
+                this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+                this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+                if(this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight) {
+                    return "정상 몸무게 입니다.";
+                } else if(this.userWeight <= this.minWeight) {
+                    return "정상 몸무게보다 미달입니다.";
+                } else {
+                    return "정상 몸무게보다 초과입니다.";
+                }
+            }
+        }
+
+        //checkWeight객체 생성
+        var jang = new checkWeight("장보리", 62, 168);
+        //checkWeight객체 생성
+        var park = new checkWeight("박달재", 88, 180);
+        console.log(jang);
+        console.log(park);
+
+        document.write(jang.getInfo(), "<br>");
+        document.write(jang.getResult(), "<br>");
+        document.write(park.getInfo(), "<br>");
+        document.write(park.getResult(), "<br>");
+    </script>
+</body>
+</html>

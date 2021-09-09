@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역함수와 전역함수</title>
+</head>
+<body>
+    <script>
+        //즉시 실행 함수 a
+        (function() {
+            //즉시 실행 함수 a내에서만 유효한 지역 변수 및 지역 함수
+            var num = 100;
+            function menu() {
+                num += 100;
+                alert(num);
+            }
+            menu();
+        }());   
+
+        //동일한 메소드 명이 존재할 때 나중에 선언된 메소드가 호출됨
+        //즉시 실행 함수 b
+        (function() {
+            //즉시 실행 함수 b내에서만 유효한 지역 변수 및 지역 함수
+            var num = 100;
+            function menu() {
+            alert(num);
+            }
+            menu();
+        }());  
+    </script>
+</body>
+</html>
