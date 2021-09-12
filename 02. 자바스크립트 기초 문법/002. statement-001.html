@@ -8,19 +8,27 @@
 </head>
 <body>
     <script>
+        
+        // 주석 : 한 줄 설명글인 경우
+        
+        /*
+            주석 : 여러 줄인 경우 
+        */
         // javascript에서는 세미콜론 생략가능하다. 하지만 헷갈리지 않도록 항상 써줄것
-        // 큰따옴표, 작은 따옴표 혼용 가능
-        document.write("환영합니다. ");
-        document.write('환영합니다. ');
-        document.write('"환영합니다." ');
-        // 역슬래시를 문자 앞에 쓰면 해당 문자를 표출하겠다는 의미
-        document.write("\"환영합니다.\"");
-        document.write('\'환영합니다.\'');
-        document.write("'환영합니다.'");
+         // 큰따옴표, 작은 따옴표 혼용 가능
+        document.write("환영합니다.", "<br>");
+        document.write('환영합니다.', "<br>");
+        document.write('"환영합니다." ', "<br>"); // 방법 1. 큰따옴표를 표현하고자 할때는 이렇게 사용
+        // 방법 2. 역슬래시를 문자 앞에 쓰면 해당 문자를 표출하겠다는 의미
+        document.write("\"환영합니다.\"", "<br>");
+        document.write('\'환영합니다.\'', "<br>");
+        document.write("'환영합니다.'", "<br>");
         var a = 'a';
-        document.write(a);
+        document.write(a, "<br>");
         var box;
         box = 100;
+        document.write(box, "<br>");
     </script>
+    <!-- 주석 : HTML 소스의 설명글은 이렇게 처리 -->
 </body>
 </html>
