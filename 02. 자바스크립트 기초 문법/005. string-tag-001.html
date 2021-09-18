@@ -13,14 +13,19 @@
         var tag = "";
         tag += "<table border='1'>";
         tag += "    <tr>";
-        tag += "        <td>a</td>";
+        tag += "        <td>1행1열</td>";
+        tag += "        <td>1행2열</td>";
         tag += "    </tr>";
-        tag += "</table>";
+        tag += "    <tr>";
+        tag += "        <td>2행1열</td>";
+        tag += "        <td>2행2열</td>";
+        tag += "    </tr>";
+        tag += "</table><br>";
         document.write(tag);
         var a = Number.parseInt("3");
-        document.write(a);
+        document.write(a, "<br>");
         var a = Boolean(0); //false
-        
+        document.write(a, "<br>");
     </script>
 </body>
 </html>

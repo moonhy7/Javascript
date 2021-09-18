@@ -8,13 +8,21 @@
 </head>
 <body>
     <script>
-        var num = 100;
-        var str = "javascript";
+        var str = "javascript"; // 문자형
+        var num = 100; // 숫자형
+        var bool = 10 < 20; // 논리형
+        var nu;
+        nu = null; // null형
+        var undef; // undefined형
+        document.write(typeof(str) + "<br>");
+        document.write(typeof(num) + "<br>");
+        document.write(typeof bool + "<br>");
+        document.write(typeof nu, "<br>");
+        var type_undef = typeof undef; // undefined형
+        document.write(type_undef, "<br>");
+
         // camelcase 표기법 : 첫 단어는 소문자로, 두 번째 단어의 첫 글자만 대문자로 표기
         var classNum;
-
-        document.write(typeof(num) + "<br>");
-        document.write(typeof(str) + "<br>");
     </script>
 </body>
 </html>

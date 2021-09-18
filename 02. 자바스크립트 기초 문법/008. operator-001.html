@@ -14,21 +14,27 @@
         var str1 = "java";
         var str2 = "script";
         var strResult;
+        var number1 = "100";
+        var number2 = "200";
 
         result = num1 + num2;
-        document.write(result + "<br>");
+        document.write(num1 + " + " + num2 + " = " + result + "<br>"); // 15 + 2 = 17
         result = num1 - num2;
-        document.write(result + "<br>");
+        document.write(num1 + " - " + num2 + " = " + result + "<br>"); // 15 - 2 = 13
         result = num1 * num2;
-        document.write(result + "<br>");
+        document.write(num1 + " x " + num2 + " = " + result + "<br>"); // 15 * 2 = 30
         result = num1 / num2;
-        document.write(result + "<br>");
+        document.write(num1 + " ÷ " + num2 + " = " + result + "<br>"); // 15 / 2 = 7.5
         result = num1 % num2;
-        document.write(result + "<br>");
+
+
+        document.write(result + "<br>"); // 15 % 2 = 1
         strResult = str1 + str2;
-        document.write(strResult + "<br>");
+        document.write(strResult + "<br>"); // java + script = javascript
         strResult = num1 + str1;
-        document.write(strResult + "<br>");
+        document.write(strResult + "<br>"); // 15 + java = 15java
+    
+        document.write(number1 + number2 + "<br>"); // "100" + "200" = "100200"
     </script>
 </body>
 </html>

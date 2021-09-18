@@ -8,15 +8,24 @@
 </head>
 <body>
     <script>
-        var a = true;
-        var b = false;
-        var c = 10 > 5;
-        var d = Boolean(null);
-        var e = Boolean("javascript");
-        var f = Boolean(0);
+        var a = true; //true
+        var b = false; //true
+        var c = 10 > 5; //true
+        var d = Boolean(null); //false
+        var e = Boolean("javascript"); //true
+        var f = Boolean(0); //false
+        var undef;
+        var g = Boolean(undef); //false
+
+        var s;
+        var t = "hello";
+        document.write("변경 전 t는 " + t, "<br>");
+        t = null;
+        document.write("변경 후 t는 " + t, "<br>");
+        document.write("t의 자료형은 " + typeof t, "<br>");
 
         // ,뒤에는 다음 붙일 변수나 문자열
-        // +와 동일하다.
+        // ,와 +는 동일하다.
         //document.write(a, "<br>");
         document.write(a + "<br>"); //true
         document.write(b, "<br>"); //false
@@ -24,7 +33,7 @@
         document.write(d, "<br>"); //false
         document.write(e, "<br>"); //true
         document.write(f, "<br>"); //false
-
+        document.write(g, "<br>"); //false
     </script>
 </body>
 </html>
