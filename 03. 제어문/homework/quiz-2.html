@@ -14,5 +14,38 @@
 </head>
 <body>
 	<h2>3의 배수 찾기</h2>
+	<script>
+		// 1. for문과 continue문 사용
+		// var count = 0;
+		// for(var i=1; i<=100; i++) {
+		// 	if(i % 3 != 0) {
+		// 		continue;
+		// 	} document.write(i + ", ");
+		// 	i++;
+		// 	count++;
+		// } document.write("<br><br>3의 배수의 갯수 : " + count);
+
+		// 2. while문과 continue문 사용
+		// while문안에 continue문 쓸 때 반드시 첫 째줄에는 증감식이 와야 한다!!
+		// var i = 0;
+		// var count = 0;
+		// while(i <= 100) {
+		// 	i++;
+		// 	if(i % 3 != 0) {
+		// 		continue;
+		// 	} document.write(i + ", ");
+		// 	count++;
+		// }
+		// document.write("<br><br>3의 배수의 갯수 : " + count);
+	
+		// 3. for문과 if문 사용
+		var count = 0;
+		for(var i = 1; i <= 100; i++) {
+			if(i % 3 == 0) {
+				document.write(i, ", ");
+				count++;
+			}
+		} document.write("<br><br>3의 배수의 갯수 : ", count);
+	</script>
 </body>
 </html>

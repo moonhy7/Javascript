@@ -8,18 +8,29 @@
 </head>
 <body>
     <script>
+        // 1. 조건문이 맞지 않아 한 번만 실행된 경우
         var i = 10;
-        var j = 1;
         do {
             document.write("hello", "<br>");
-        } while(i <3) // 조건문이 맞지 않으므로 한번만 실행된 것
+        } while(i < 3) // 조건문이 맞지 않으므로 한번만 실행된 것
 
+        // 2. do-while문을 사용한 경우
         //do 안의 스크립트가 먼저 실행이 되고 while문에 조건식을 검사
         //조건식이 true면 do안의 스크립트 반복 실행
+        var j = 1;
+        document.write("<h4>while문 실행</h4>");
         do {
-            document.write("javascript" +j, "<br>");
+            document.write("javascript" + j, "<br>");
             j++
         } while(j<=10);
+
+        // 3. while문으로 표현한 경우
+        document.write("<h4>while문 실행</h4>");
+        var k = 1;
+        while(k<=10) {
+            document.write("javascript" + k, "<br>");
+            k++;
+        }  
     </script>
 </body>
 </html>

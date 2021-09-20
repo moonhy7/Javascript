@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 당첨 확인</title>
+</head>
+<body>
+    <script>
+        var lotto = [];
+
+        for(var i = 0; i < 7; i++) {
+            lotto.push(Math.floor(Math.random() * 45) + 1);
+
+            for(var j = 0; j < i; j++) {
+                if(lotto[i] == lotto[j]) {
+                    lotto.pop();
+                    i--;
+                }
+            }
+        }
+        console.log(lotto);
+
+        var lottoNo = "";
+        for(var k = 0; k < lotto.length; k++) {
+            if(k == 6) {
+                lottoNo += "보너스번호 : " + lotto[k];
+            } else {
+                lottoNo += lotto[k] + ", ";
+            }
+        }
+
+        document.write("이번주 로또 당첨 번호는 : " + lottoNo, '<br>');
+
+        var userNo = [];
+
+        for(var userCnt = 0; userCnt < 6; userCnt++) {
+            var num = prompt("1~45까지의 숫자를 입력하세요.");
+            userNo.push(num);
+            if(num < 1 || num > 45 || num == '' || num == null) {
+                userNo.pop();
+                userCnt--;
+            } else {
+                for(var h = 0; h < userCnt; h++) {
+                    if(userNo[userCnt] == userNo[h]) {
+                        userNo.pop();
+                        userCnt--;
+                    }
+                }
+            }
+        }
+
+        document.write("구입한 로또 번호 : " + userNo, '<br>');
+
+        var correctCnt = 0;
+        var bonusFlag = false;
+
+        for(var m = 0; m < lotto.length; m++) {
+            for(var n = 0; n < userNo.length; n++) {
+                if(lotto[m] == userNo[n]) {
+                    if(m == 6) {
+                        bonusFlag = true;
+                    } else {
+                        correctCnt++;
+                    }
+                }
+            }
+        }
+
+        if(correctCnt == 6) {
+            document.write("1등 당첨!", '<br>');
+        } else if(correctCnt == 5) {
+            if(bonusFlag) {
+                document.write("2등 당첨!", '<br>');
+            } else {
+                document.write("3등 당첨!", '<br>');
+            }
+        } else if(correctCnt == 4) {
+            document.write("4등 당첨!", '<br>');
+        } else if(correctCnt == 3) {
+            document.write("5등 당첨!", '<br>');
+        } else {
+            document.write("꽝!", '<br>');
+        }
+    </script>
+</body>
+</html>
