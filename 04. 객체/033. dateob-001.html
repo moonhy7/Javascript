@@ -11,7 +11,7 @@
         //현재 날짜와 현재 시간을 가지는 날짜 객체 생성
         var today = new Date();
         //월
-        var nowMonth = today.getMonth();
+        var nowMonth = today.getMonth() + 1;
         //일
         var nowDate = today.getDate();
         //요일 0:일요일 ~ 6:토요일
@@ -24,7 +24,7 @@
         var nowSecond = today.getSeconds();
 
         document.write("<h1>현재 날짜 시간 정보</h1>");
-        document.write("현재 월 : " + nowMonth + 1 + "<br>");
+        document.write("현재 월 : " + nowMonth + "<br>");
         document.write("현재 일 : " + nowDate + "<br>");
         document.write("현재 요일 : " + nowDay + "<br>");
         document.write("현재 시간 : " + nowHour + "<br>");
@@ -32,15 +32,17 @@
         document.write("현재 초 : " + nowSecond + "<br>");
 
         //입력한 날짜로 된 날짜 객체 생성, 시간 미 입력시 시간은 00:00:00으로 초기화
-        // var worldcup = new Date(2002, 4, 31);
-        // var worldcup = new Date("2002-04-31");
+        // 원래 5월 31일임
+        // var worldcup = new Date("2002/5/31");
+        // var worldcup = new Date("2002, 5, 31");
+        // var worldcup = new Date("2002-05-31");
 
         //시간까지 초기화
-        // var worldcup = new Date(2002, 4, 31, 09, 30, 30);
-        var worldcup = new Date("2002-04-31 09:30:30");
+        // var worldcup = new Date(2002, 5, 31, 09, 30, 30);
+        var worldcup = new Date("2002-05-31 09:30:30");
 
         //월
-        var wMonth = worldcup.getMonth();
+        var wMonth = worldcup.getMonth() + 1;
         //일
         var wDate = worldcup.getDate();
         //요일

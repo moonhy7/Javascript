@@ -12,24 +12,17 @@
         var nowYear = today.getFullYear();
 
         //날짜 객체 생성시에도 Month는 -1해서 입력
-        var theDate = new Date(nowYear, 11, 31);
-        var jongGang = new Date(nowYear, 11, 15);
+        var theDate = new Date(nowYear, 11, 31); // 12월 31일을 표현한 것임
 
         //getTime() 1970/1/1부터 경과된 시간을 밀리초로 변환해서 리턴
         var diffDate = theDate.getTime() - today.getTime();
-        var diffDate2 = jongGang.getTime() - today.getTime();
 
         //Math.ceil() 소수 점 첫째자리에서 반올림
         //밀리초로 된 diffdate를 일단위로 변환
         var result = Math.ceil(diffDate / ( 1000*60*60*24));
-        var result2 = Math.ceil(diffDate2 / ( 1000*60*60*24));
 
         document.write("오늘 날짜 : " + today + "<br>");
-        document.write("연말 D-day : " + result + "<br>");
-        document.write("종강일 D-day : " + result2);
-
-
-
+        document.write("연말까지 D - " + result + "일 남았습니다.<br>");
     </script>
 </body>
 </html>

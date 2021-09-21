@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
     <style>
-        img {
-            display: block;
-            position: absolute;
-        }
         button {
+            display: block;
+        }
+        img {
             display: block;
         }
     </style>
 </head>
 <body>
-    <button type="button" id="btn" class="btn">이미지 이동</button>
+    <h1>이미지 변경</h1>
+    <button type="button" id="btn" class="btn">이미지 변경</button>
     <img src="images/3.png" id="img" class="img">
     <script>
         // id 선택자
@@ -32,11 +32,13 @@
 
         //button 클릭 이벤트 등록
         btn.addEventListener('click', function() {
-            //버튼 클릭 시 img 태그의 left, top 속성을 변경
-            img.style.left = '500px';
-            img.style.top = '500px';
-            img.style.background = 'pink';
-            img.style.border = '5px solid red';
+            //버튼 클릭 시 img 태그의 src 속성을 변경
+            // getAttribute 메소드를 이용해서 토글되도록 수정
+            if(img.getAttribute('src') == 'images/3.png') {
+                img.setAttribute('src', 'images/4.png');
+            } else {
+                img.setAttribute('src', 'images/3.png');
+            }
         });
     </script>
 </body>

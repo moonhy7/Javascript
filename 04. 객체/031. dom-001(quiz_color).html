@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        button {
+            display: inline;
+        }
+        img {
+            display: block;
+        }
+        div {
+            display: block;
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>색깔 바꾸기</h1>
+    <div id="div1" style="background-color: red"></div>
+    <div id="div2" style="background-color: yellow"></div>
+    <div id="div3" style="background-color: red"></div>
+    <div id="div4" style="background-color: yellow"></div>
+    <button type="button" id="btn">색상 변경하기</button>
+    <script>
+        var div1 = document.getElementById("div1");
+        var div2 = document.getElementById("div2");
+        var div3 = document.getElementById("div3");
+        var div4 = document.getElementById("div4");
+        var btn = document.getElementById("btn");
+        
+        btn.addEventListener('click', function() {
+            if(div1.getAttribute('style') == "background-color: red") {
+                div1.setAttribute('style', 'background-color: yellow');
+            } else {
+                div1.setAttribute('style', 'background-color: red');
+            }
+
+            if(div2.getAttribute('style') == "background-color: yellow") {
+                div2.setAttribute('style', 'background-color: red');
+            } else {
+                div2.setAttribute('style', 'background-color: yellow');
+            }
+
+            if(div3.getAttribute('style') == "background-color: red") {
+                div3.setAttribute('style', 'background-color: yellow');
+            } else {
+                div3.setAttribute('style', 'background-color: red');
+            }
+
+            if(div4.getAttribute('style') == "background-color: yellow") {
+                div4.setAttribute('style', 'background-color: red');
+            } else {
+                div4.setAttribute('style', 'background-color: yellow');
+            }
+    });
+    </script>
+</body>
+</html>
