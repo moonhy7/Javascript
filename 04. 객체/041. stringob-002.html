@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열객체(이메일 유효성 검사)</title>
+</head>
+<body>
+    <script>
+        var userEmail = prompt("당신의 이메일은?", "");
+        var arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+
+        var check1 = false;
+        var check2 = false;
+
+        //문자열에 "@"가 있으면 "@"의 index 반환, 없으면 -1 반환
+        document.write('=============indexOf("@")=============', "<br>");
+        document.write(userEmail.indexOf("@"), "<br>");
+        if(userEmail.indexOf("@") > 0) {
+            check1 = true;
+        }
+
+        document.write('=============indexOf(arrUrl[i])=============', "<br>");
+        for(var i = 0; i < arrUrl.length; i++) {
+            //arrUrl의 형식 하나씩 꺼내서 비교하고 해당하는 값이 존재하면 해당되는 index 반환
+            // 해당하는 값이 존재하지않으면 -1 반환
+            document.write(userEmail.indexOf(arrUrl[i]), "<br>");
+            if(userEmail.indexOf(arrUrl[i]) > 0) {
+                check2 = true;
+            }
+        }
+
+        document.write('=============이메일 형식 결과=============', "<br>");
+        if(check1 && check2) {
+            document.write(userEmail);
+        } else {
+            document.write("이메일 형식이 잘못되었습니다.");
+        }
+    </script>
+</body>
+</html>

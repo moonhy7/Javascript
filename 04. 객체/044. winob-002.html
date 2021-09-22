@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <!--clearInterval : 동작 중인 setInterval 중지시킴-->
+    <button onclick="clearInterval(auto_1);">증가 정지</button>
+    <button onclick="clearInterval(auto_2);">감소 정지</button>
+    <script>
+        var addNum = 0;
+        var subNum = 1000;
+
+        //1초 후부터 1초마다 function안에 작성한 소스코드 실행
+        //setInterval은 변수에 안 담아서 사용가능하지만 변수에 안담을 경우
+        //클리어가 불가능해져서 메모리가 계속 누적되는 문제 발생
+        var auto_1 = setInterval(function() {
+            addNum++;
+            console.log("addNum : " + addNum);
+        }, 1000);
+
+        var auto_2 = setInterval(function() {
+            subNum--;
+            console.log("subNum : " + subNum);
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -8,16 +8,82 @@
 </head>
 <body>
     <script>
-        var t = "Hello Tank you good luck to you";
+        var t = "Hello Thank you good luck to you";
 
-        //index = 16인 문자 반환
-        document.write("========= charAt ========");
+        //index가 16인 문자 반환
+        document.write("======charAt======", "<br>");
+        document.write(t.charAt(16), "<br>");
 
-        //"you"를 가장 처음 만나는 index 반환(12)
-        document.write("========= indexof ========");
+        //왼쪽에서 시작하여 오른쪽으로 가면서 "you"를 가장 처음 만나는 index 반환 -> 12
+        document.write("======indexOf======", "<br>");
+        document.write(t.indexOf("you"), "<br>");
+        
+        //index 16부터 오른쪽으로 "you"를 가장 처음 만나는 index 반환 -> 29
+        document.write("======indexOf(16)======", "<br>"); 
+        document.write(t.indexOf("you", 16), "<br>"); // 상대적인 위치값 X
+        
+        //왼쪽으로 가장 처음 찾은 you의 index 반환 -> 29 
+        document.write("======lastIndexOf======", "<br>");
+        document.write(t.lastIndexOf("you"), "<br>"); // 29번째 you가 왼쪽에서 보면 더 가까워서 
 
-        document.write("========= lastIndexOf(25) ========", "<br>");
-        document.write
+        //index 25부터 왼쪽으로 가장 처음 찾은 you의 index 반환 -> 12
+        document.write("======lastIndexOf(25)======", "<br>");
+        document.write(t.lastIndexOf("you", 25), "<br>"); // 인덱스 25부터하면 29번째 you는 범위안에 없음
+
+        //처음으로 찾은 luck이라는 문자열 반환 -> match() 메소드는 숫자가 아닌 문자열을 반환!
+        document.write("======match======", "<br>");
+        document.write(t.match("luck"), "<br>"); // luck
+        
+        //처음으로 찾은 you의 index 반환
+        //indexOf와의 차이점 : search는 검색 위치 지정 불가
+        document.write("======search======", "<br>");
+        document.write(t.search("you"), "<br>"); // 12
+
+        //index 21부터 4개의 문자열 반환 -> substr(a, b)은 a부터 b개 만큼 반환! 
+        document.write("======substr======", "<br>");
+        document.write(t.substr(21, 4), "<br>"); // luck
+
+        //index 6~12사이의 문자열 반환 -> substring(a, b)은 a부터 b-1까지 문자열 반환 
+        document.write("======substring======", "<br>");
+        document.write(t.substring(6, 11), "<br>"); // Thank
+
+        //문자열에서 '처음'으로 찾은 you를 me로 치환하여 반환
+        document.write("======replace======", "<br>"); 
+        document.write(t.replace("you", "me"), "<br>"); // Hello Thank me good luck to you 
+
+        //대문자를 소문자로 변환하여 반환
+        document.write("======toLowerCase======", "<br>");
+        document.write(t.toLowerCase(), "<br>"); // hello thank you good luck to you
+
+        //소문자를 대문자로 변환하여 반환
+        document.write("======toUpperCase======", "<br>");
+        document.write(t.toUpperCase(), "<br>"); // HELLO THANK YOU GOOD LUCK TO YOU
+
+        //문자열 길이 반환
+        document.write("======length======", "<br>");
+        document.write(t.length, "<br>"); // 32
+
+        //공백문자 기준으로 문자열 분리하여 배열객체로 반환
+        document.write("======split======", "<br>");
+        var s = t.split(" ");
+        document.write(s, "<br>"); // Hello,Thank,you,good,luck,to,you
+        document.write(s[0], "<br>"); // Hello
+        document.write(s[4], "<br>"); // luck
+
+        //해당하는 문자의 아스키 코드 값 반환
+        var str = "ABCD";
+        document.write("======charCodeAt======", "<br>");
+        document.write(str.charAt(1), "<br>"); // B
+        document.write(str.charCodeAt(1), "<br>"); // 66 (B의 아스키코드)
+
+        //아스키 코드 값에 해당하는 문자 반환
+        document.write("======fromCharCode======", "<br>");
+        document.write(String.fromCharCode(97), "<br>"); // a (아스키코드가 97인 문자 반환)
+
+        var phoneNum = "01012345678";
+        document.write("======phonNum======", "<br>");
+        //phoneNum.substring(0, phoneNum.length - 4) : 0~length-4까지의 문자열 반환
+        document.write(phoneNum.substring(0, phoneNum.length - 4) + "****", "<br>");
     </script>
 </body>
 </html>
