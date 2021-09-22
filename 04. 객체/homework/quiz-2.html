@@ -11,7 +11,21 @@
 <body>
 	<script>
 		var r = prompt("원의 반지름은? (cm)");
-	
+		var circle1 = new Circle(r);
+		document.write("반지름이 " + r + "cm일 때<br>");
+		document.write("원의 둘레 : 약 " + circle1.circumference() + "cm<br>");
+		document.write("원의 넓이 : 약 " + circle1.area() + "cm<sup>2</sup>");
+		function Circle(radius) {
+			this.radius = radius, // this.radius에 r을 담음 
+			this.circumference = function() { // circumference()로 써야함(함수라서!)
+				return Math.floor(2 * this.radius * Math.PI);
+			}
+			// 위처럼 수식이 들어있는 문장을 function() 을 안쓰고 아래처럼 쓰면 글자 그대로 출력됨
+			// this.circumference = Math.floor(2 * this.radius * Math.PI);
+			this.area = function() {
+				return Math.floor(Math.pow(this.radius,2) * Math.PI);
+			} 
+		}
 	</script>
 </body>
 </html>

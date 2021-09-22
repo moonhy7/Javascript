@@ -2,22 +2,19 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Untitled Document</title>
-
+    <title>배열의 총합</title>
+</head>
+<body>
     <script type="text/javascript">
         /*
-
-         미션 02: 배열의 총 합을 구해 화면에 출력해 주세요.
-
+            미션 02: 배열의 총 합을 구해 화면에 출력해 주세요.
          */
-        // 풀이 전 코드:
         var data = [10, 20, 30, 40, 50];
-
+        var sum = 0;
+        for(var i = 0; i < data.length; i++) {
+            sum += data[i];
+        }
+        alert("배열 합은 " + sum + "입니다.");
     </script>
-
-</head>
-
-<body>
-
 </body>
 </html>

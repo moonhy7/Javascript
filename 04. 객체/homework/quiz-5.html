@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title></title>
-
+    <title>입력값의 합구하기</title>
+</head>
+<body>
     <script type="text/javascript">
         /*
          미션 02: 입력 값 합 구하기
@@ -14,16 +14,20 @@
          - window.prompt()를 이용해 값을 입력받을 때 입력받는 횟수가 출력되어야 합니다.
          - 입력 값이 end면 alert()을 이용해 “입력이 종료되었습니다.” 메시지를 띄운 후 프로그램을 종료해 주세요.
          - end가 아닌 경우 입력받은 값의 합을 document.write()를 이용해 화면에 출력해 주세요.
-
-
          */
-
-
-
+        var index = 1;
+        var sum = 0;
+        while(true) {
+            
+            var data = prompt(index + "번째 숫자를 입력하세요");
+            if(data == "end") {
+                alert("입력이 종료되었습니다.");
+                break;
+            }
+            sum += parseInt(data);
+            document.write("현재 합 =  " + sum + "<br>");
+            index++;
+        }
     </script>
-
-</head>
-<body>
-
 </body>
 </html>

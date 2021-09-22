@@ -61,12 +61,27 @@
 
         btn.addEventListener('click', function() {
             // 이미지 찾기.
+            // 이미지 태그 배열 생성
             var img = document.getElementsByTagName('img');
 
             // 이미지 개수 구하기.
+            // 이미지 태그 배열의 길이
             var length = img.length;
 
             // 여기에 풀이를 입력해주세요.
+            // 이미지 배열하기.
+            for(var i = 0; i < length; i++) {
+                // n번째 이미지 구하기
+                // 이미지 태그 하나씩 꺼내기
+                var nImg = img[i];
+                // 위치 값 구하기
+                var x = 100 + (i % 3) * 200; 
+                var y = 100 + parseInt(i / 3) * 200;
+
+                // 위치 설정하기
+                nImg.style.left = x + 'px';
+                nImg.style.top = y + 'px';
+            }
             
         });
 
