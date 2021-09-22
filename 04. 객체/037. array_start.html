@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체 생성하기</title>
+</head>
+<body>
+    <script>
+        // 방법 1. 배열 먼저 생성(크기지정X) 후 인덱스로 하나씩 추가
+        var arr1 = new Array();
+        arr1[0] = 30;
+        arr1[1] =  "따르릉";
+        arr1[2] = true;
+        document.write(arr1, "<br>");
+
+        // 방법 2. 크기 지정해주기 (값을 넣지 않으면 쉼표만 계속 출력된다)
+        var arr2 = new Array(10);
+        document.write(arr2,  "<br>");
+
+        // 방법 3. new 키워드를 사용하여 배열 생성
+        var arr3 = new Array(30, "따르릉", true);
+        document.write(arr3, "<br>");
+
+        // 방법 4. new 키워드를 사용하지 않고 []에 값 넣어서 생성
+        var arr4 = [30, "따르릉", true];
+        document.write(arr4);
+    </script>
+</body>
+</html>

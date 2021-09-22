@@ -10,17 +10,17 @@
     <script>
         var num = 2.1234;
         //최대 값 반환
-        var maxNum = Math.max(10, 5, 8, 30);
+        var maxNum = Math.max(10, 5, 8, 30); // 30
         //최소 값 반환
-        var minNum = Math.min(10, 5, 8, 30);
+        var minNum = Math.min(10, 5, 8, 30); // 5
         //소수점 첫 째 자리에서 반올림
-        var roundNum = Math.round(num);
+        var roundNum = Math.round(num); // 2
         //소수점 첫 째 자리에서 올림
-        var ceilNum = Math.ceil(num);
+        var ceilNum = Math.ceil(num); //3
         //소수점 첫 째 자리에서 버림
-        var floorNum = Math.floor(num);
+        var floorNum = Math.floor(num); // 2
         //0~1사이의 난수 반환
-        var rndNum = Math.random();
+        var rndNum = Math.random(); 
         //0~10사이의 난수 반환
         var rndNum1 = Math.random() * 10;
         //0~10사이의 난수 반환, 소수점 버림
@@ -32,17 +32,17 @@
         //Math.floor(Math.random() * (최대값(150) - 최소값(120) + 1)) + 최소값(120)
         var rndNum4 = Math.floor(Math.random() * 31) + 120;
         //원주율 반환
-        var piNum = Math.PI;
+        var piNum = Math.PI; // 3.141592653589793
         //거듭제곱 값 반환
-        var powNum = Math.pow(10, 3);
+        var powNum = Math.pow(10, 3); // 1000
         //제곱근 값 반환
-        var sqrtNum = Math.sqrt(100);
+        var sqrtNum = Math.sqrt(100); // 10
 
         document.write("Math.max() = " + maxNum, "<br>");
         document.write("Math.min() = " + minNum, "<br>");
         document.write("Math.round() = " + roundNum, "<br>");
-        document.write("Math.floor() = " + floorNum, "<br>");
         document.write("Math.ceil() = " + ceilNum, "<br>");
+        document.write("Math.floor() = " + floorNum, "<br>");
         document.write("Math.random() = " + rndNum, "<br>");
         document.write("Math.random() * 10 = " + rndNum1, "<br>");
         document.write("Math.floor(Math.random() * 11) = " + rndNum2, "<br>");
@@ -51,8 +51,6 @@
         document.write("Math.PI = " + piNum, "<br>");
         document.write("Math.pow() = " + powNum, "<br>");
         document.write("Math.sqrt() = " + sqrtNum, "<br>");
-
-
     </script>
 </body>
 </html>
