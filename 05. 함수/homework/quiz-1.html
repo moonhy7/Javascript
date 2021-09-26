@@ -7,6 +7,23 @@
 	<title>연습문제 1</title>
 </head>
 <body>
+	<script>
+		function sumMulti(num1, num2) {
+			if(num1 == num2) {
+				return num1 * num2;
+			} else {
+				return num1 + num2;
+			}
+		}
 
+		// if 문 안에 코드가 한 줄일 경우 괄호 안써도됨
+		// function sumMulti(x, y) {
+		// 	if (x == y) return x * y;
+		// 	else return x + y;
+		// }
+
+		console.log(sumMulti(5, 10)); // 15
+		console.log(sumMulti(10, 10)); // 100
+	</script>
 </body>
 </html>
