@@ -11,21 +11,21 @@
         var count = 0;
 
         //일반 메소드 호이스팅 방식 지원
-        myFnc();
+        myFnc(); // count = 1
         //일반 메소드 선언
         function myFnc() {
             count++;
             document.write("hello" +count, "<br>");
         }
+        myFnc(); // count = 2
 
-        myFnc();
         //익명 메소드 선언
         var theFnc = function() {
             count++;
             document.write("bye" +count, "<br>");
         }
         //익명 메소드 호이스팅 방식 미지원
-        theFnc();
+        theFnc(); // count = 3
 
         //ES6 화살표 함수
         // count muFnc2 = () => document.write("javascript", "<br>");
@@ -34,7 +34,6 @@
         // const myFnc3 = num => document.write("javascript" + num, "<br>");
         // var num = 1;
         // myFnc3(num);
-
     </script>
 </body>
 </html>

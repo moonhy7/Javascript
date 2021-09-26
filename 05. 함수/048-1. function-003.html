@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수가 있는 메소드</title>
+</head>
+<body>
+    <script>
+        //java와 다르게 매개변수의 타입을 지정하지 않음
+        function myFnc(name, area) {
+            document.write("변수타입은 " + typeof(name) + "입니다.", "<br>");
+            document.write("안녕하세요." + name + "입니다.", "<br>");
+            document.write("사는 곳은 " + area + "입니다.", "<br><br>");
+        }
+
+        myFnc("홍길동", "서울");
+        myFnc("임꺽정", "부산");
+        myFnc(123, "서울");
+    </script>
+</body>
+</html>

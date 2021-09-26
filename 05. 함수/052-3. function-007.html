@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역함수와 전역함수</title>
+</head>
+<body>
+    <script>
+        var num = 100;
+        function menu() { // 개발자 A가 작성한 코드
+            num += 100;
+            alert(num);
+        } 
+        menu(); // 100
+        // 100이 출력되는 이유 : 두 개발자가 작성한 함수의 이름이 겹쳐서
+        // 먼저 만들어진 개발자 A의 코드가 제거되고 개발자 B의 함수가 호출됨 
+        function menu() { // 개발자 B가 작성한 코드
+            alert(num);
+        }
+    </script>
+</body>
+</html>
